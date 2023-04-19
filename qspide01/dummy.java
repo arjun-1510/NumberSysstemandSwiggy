@@ -1,32 +1,30 @@
 import java.util.*;
 
-class MainClass {
+class dummy {
 
     static Scanner sc = new Scanner(System.in);
 
-    static boolean flag =false;
+    static boolean flag = false;
 
-    static int attempt ;
+    static int attempt = 0;
 
-    static int std_id ;
+    static int std_id = 0;
 
-    static int std_psw ;
+    static int std_psw = 0;
 
-    static int forget_std_id ;
+    static int forget_std_id = 0;
 
-    static int forget_std_psw ;
+    static int forget_std_psw = sc.nextInt();
 
-    static int forget_std_confim ;
+    static int forget_std_confim = sc.nextInt();
 
-    static int forget_std_Age ;
+    static int forget_std_Age = sc.nextInt();
 
-    
-
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws Exception {
 
         do {
 
-            System.out.println("1.SignUp\n2.Login\n3.Forget Password\n4.exit");
+            System.out.println("1.SignUp\n2.Login\n3.exit");
             System.out.println("Enter to Select Number");
             int num = sc.nextInt();
 
@@ -110,11 +108,6 @@ class MainClass {
 
                 case 3: {
 
-
-                    while (true) {
-
-                    System.out.println("Forget password Page");
-
                     System.out.println("student Id Age");
                     int forget_Sid = sc.nextInt();
 
@@ -123,9 +116,7 @@ class MainClass {
 
                     System.out.println("Waiting For your Otp");
 
-                    flag=true;
-
-                    
+                    Thread.sleep(2000);
 
                     int otpNo = (int) (Math.random() * 9000) + 1000;
                     System.out.println(otpNo);
@@ -149,8 +140,7 @@ class MainClass {
                         System.out.println("Enter your Age");
                         forget_std_Age = sc.nextInt();
                         attempt++;
-                        
-                    
+
                         if (attempt == 2) {
                             System.out.println("Thank you");
                             flag = false;
@@ -160,21 +150,13 @@ class MainClass {
                     } else {
                         System.out.println("Invalid Otp");
                     }
-                
 
-                    System.out.println("Exit");
-                    int exit = sc.nextInt();
                     break;
+                }
 
-                   
-
-                   
-                
-                }break;
             }
-            
 
-        }} while (flag);
+        } while (true);
 
     }
 }
