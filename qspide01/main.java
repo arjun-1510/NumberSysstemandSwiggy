@@ -83,6 +83,27 @@ class MainClass {
                             System.out.println("Enter your selection");
                             int Select_App = sc.nextInt();
 
+                             switch(Select_App) {
+
+                                case 1 : {
+
+                                    Numbersystem n = new Numbersystem();
+                                    n.numberapplication(args);
+                                    
+                                    break;
+                                }
+
+                                case 2 : {
+
+                                    Arjunhotels arju = new Arjunhotels();
+                                    arju.swiggyapplication(args);
+                                                   
+                                  
+                                    
+                                    break;}
+                             }
+
+
                         }
 
                         System.out.println("This is Login Page");
@@ -109,6 +130,9 @@ class MainClass {
                     break;
 
                 case 3: {
+
+
+                
 
 
                     while (true) {
